@@ -10,9 +10,14 @@ export class BlogService {
   loadSiteMap():Observable<Sitemap>{
     return this.http.get<Sitemap>("/assets/sitemap.json");
   }
-  getArticle(title:string):Observable<Article>{
+  getArticlesForCategory(category:string){
     return this.loadSiteMap().pipe(
-      map((sitemap)=>this.findArticle(sitemap,title))
+      map((siteMap)=>siteMap.categories[category])
+    );
+  }
+  getArticle(title:string,category:string):Observable<Article>{
+    return this.loadSiteMap().pipe(
+      map((sitemap)=>this.findArticle(sitemap,title,category))
     )
   }
   getFeaturedArticle():Observable<string>{
@@ -20,15 +25,21 @@ export class BlogService {
       map((sitemap)=>sitemap.featured)
     );
   }
-  private findArticle(sitemap:Sitemap,title:string):Article{
-    return sitemap.articles.filter((article)=>article.title === title)[0];
+  getCategories():Observable<Array<string>>{
+    return this.loadSiteMap().pipe(
+      map((sitemap)=>Object.keys(sitemap.categories))
+    )
+  }
+  private findArticle(sitemap:Sitemap,title:string,category:string):Article{
+    console.log(sitemap.categories,category,sitemap.categories[category]);
+    return sitemap.categories[category].filter((article)=>article.title === title)[0];
   }
 
 }
 
 export class Sitemap{
   featured:string;
-  articles:Array<Article>
+  categories:{[category:string]:Array<Article>}
 }
 export class Article{
   title:string

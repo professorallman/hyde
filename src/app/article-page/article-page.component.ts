@@ -21,7 +21,7 @@ export class ArticlePageComponent implements OnInit {
 
   ngOnInit() {
     this.article$ = this.route.paramMap.pipe(
-      switchMap((params:ParamMap)=>this.blogservice.getArticle(params.get('title')))
+      switchMap((params:ParamMap)=>this.blogservice.getArticle(params.get('title'),params.get('category')))
     )
   }
 

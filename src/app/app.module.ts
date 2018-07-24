@@ -9,6 +9,8 @@ import { ArticleSummaryComponent } from './article-summary/article-summary.compo
 import { ArticleComponent } from './article/article.component';
 import { ArticlePageComponent } from './article-page/article-page.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { CategoryListComponent } from './category-list/category-list.component';
+import { CategoryPageComponent } from './category-page/category-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HomepageComponent } from './homepage/homepage.component';
     ArticleSummaryComponent,
     ArticleComponent,
     ArticlePageComponent,
-    HomepageComponent
+    HomepageComponent,
+    CategoryListComponent,
+    CategoryPageComponent
   ],
   imports: [
     BrowserModule,

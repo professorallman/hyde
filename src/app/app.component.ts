@@ -9,15 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  sitemap:Sitemap;
+  categories$:Observable<Array<string>>;
   constructor(private blogService:BlogService,
-              private router:Router){
-    this.sitemap = {featured:'',articles:[]};
-  }
+              private router:Router){}
   ngOnInit(): void {
-    this.blogService.loadSiteMap().subscribe((sitemap)=>this.sitemap=sitemap);
+    this.categories$ = this.blogService.getCategories();
   }
-  showArticle(article:Article){
-    this.router.navigate(['/article',article.title])
+  showCatogryArticles(category:string){
+    this.router.navigate(['/article',category]);
   }
 }
