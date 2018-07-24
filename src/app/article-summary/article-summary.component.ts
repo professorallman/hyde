@@ -7,7 +7,6 @@ import { Article } from '../blog.service';
   template:
 `<summary>
   <h1>{{article.title}}</h1>
-  <time>{{article.posted}}</time>
   <p>{{article.summary}}</p>
 </summary>`
 })

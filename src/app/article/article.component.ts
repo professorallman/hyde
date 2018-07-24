@@ -7,8 +7,8 @@ import { Article } from '../blog.service';
   template:
 `<article *ngIf="article">
   <h1>{{article.title}}</h1>
-  <h5>{{article.category}}</h5>
   <time>{{article.posted}}</time>
+  <hr/>
   <ngx-md [path]="article.markdownLink"></ngx-md>
 </article>`
 })

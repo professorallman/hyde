@@ -10,10 +10,7 @@ import { Location } from '@angular/common';
   templateUrl: './article-page.component.html',
   styleUrls: ['./article-page.component.css'],
   template:
-`
-<button (click)="back()">Back</button>
-<app-article [article]="article$ | async"></app-article>
-`
+`<app-article [article]="article$ | async"></app-article>`
 })
 export class ArticlePageComponent implements OnInit {
   article$:Observable<Article>
@@ -26,9 +23,6 @@ export class ArticlePageComponent implements OnInit {
     this.article$ = this.route.paramMap.pipe(
       switchMap((params:ParamMap)=>this.blogservice.getArticle(params.get('title')))
     )
-  }
-  back(){
-    this.location.back();
   }
 
 }
