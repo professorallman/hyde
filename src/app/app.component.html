@@ -1,2 +1,8 @@
-<ngx-md [path]="sitemap.featured"></ngx-md>
-<app-article-list [articles]="sitemap.articles"></app-article-list>
+<aside>
+    <nav>
+        <app-article-list [articles]="sitemap.articles" (articleSelected)="showArticle($event)"></app-article-list>
+    </nav>
+</aside>
+<section>
+    <router-outlet></router-outlet>
+</section>

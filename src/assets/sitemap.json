@@ -2,10 +2,11 @@
     "featured":"/assets/welcome.md",
     "articles":[
         {
+            "title":"Lorem Ipsum",
             "category":"example",
             "summary":"An example article",
             "posted":"9/9/1999",
-            "markdownLink":"/assets/welcome.md"
+            "markdownLink":"/assets/example-article.md"
         }
     ]
 }

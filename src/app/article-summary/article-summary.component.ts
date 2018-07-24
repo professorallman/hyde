@@ -6,6 +6,7 @@ import { Article } from '../blog.service';
   styleUrls: ['./article-summary.component.css'],
   template:
 `<summary>
+  <h1>{{article.title}}</h1>
   <time>{{article.posted}}</time>
   <p>{{article.summary}}</p>
 </summary>`
