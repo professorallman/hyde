@@ -8,7 +8,7 @@ import { switchMap } from 'rxjs/operators';
   selector: 'app-category-page',
   styleUrls: ['./category-page.component.css'],
   template:
-` <app-article-list [articles]="articles$ | async" (articleSelected)="showArticle($event)"></app-article-list>`
+`<app-article-list [articles]="articles$ | async" (articleSelected)="showArticle($event)"></app-article-list>`
 })
 export class CategoryPageComponent implements OnInit {
   articles$:Observable<Array<Article>>

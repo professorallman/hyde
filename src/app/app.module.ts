@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import appRoutes from './routes';
+import { appRoutes } from './routes';
 import { AppComponent } from './app.component';
 import { NgxMdModule } from 'ngx-md';
 import { ArticleListComponent } from './article-list/article-list.component';
