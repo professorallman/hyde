@@ -14,5 +14,11 @@ export class BlogService {
 
 export class Sitemap{
   featured:string;
-  articles:{[key:string]:Array<String>} 
+  articles:Array<Article>
+}
+export class Article{
+  category:string
+  summary:string
+  posted:Date
+  markdownLink:URL
 }

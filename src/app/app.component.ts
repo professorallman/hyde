@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogService } from './blog.service';
+import { BlogService, Sitemap } from './blog.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -8,10 +8,12 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  featured:string;
-  constructor(private blogService:BlogService){}
+  sitemap:Sitemap;
+  constructor(private blogService:BlogService){
+    this.sitemap = {featured:'',articles:[]};
+  }
   ngOnInit(): void {
-    this.blogService.loadSiteMap().subscribe((siteMap)=>this.featured=siteMap.featured);
+    this.blogService.loadSiteMap().subscribe((sitemap)=>this.sitemap=sitemap);
   }
   
 }

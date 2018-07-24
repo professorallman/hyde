@@ -1,4 +1,11 @@
 {
     "featured":"/assets/welcome.md",
-    "articles":[]
+    "articles":[
+        {
+            "category":"example",
+            "summary":"An example article",
+            "posted":"9/9/1999",
+            "markdownLink":"/assets/welcome.md"
+        }
+    ]
 }
