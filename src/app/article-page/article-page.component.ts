@@ -7,7 +7,6 @@ import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-article-page',
-  templateUrl: './article-page.component.html',
   styleUrls: ['./article-page.component.css'],
   template:
 `<app-article [article]="article$ | async"></app-article>`

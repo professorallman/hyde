@@ -4,7 +4,6 @@ import { Article, BlogService } from '../blog.service';
 
 @Component({
   selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
   template:`<ngx-md [path]="$featured|async"></ngx-md>`
 })

@@ -6,7 +6,6 @@ import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-category-page',
-  templateUrl: './category-page.component.html',
   styleUrls: ['./category-page.component.css'],
   template:
 ` <app-article-list [articles]="articles$ | async" (articleSelected)="showArticle($event)"></app-article-list>`
