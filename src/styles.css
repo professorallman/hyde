@@ -5,3 +5,9 @@ body{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size:2em;
 }
+
+/* Copied githubs markdown blockqoute style */
+blockquote {
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+}
